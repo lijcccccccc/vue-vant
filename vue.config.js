@@ -24,9 +24,10 @@ module.exports = {
       errors: true
     },
     proxy: {
-      [process.env.VUE_APP_BASE_API]: {
-        target: `https://${require('os').hostname()}:3000/`,
-        changeOrigin: true
+      '/api': {
+        target: `http://${require('os').hostname()}:3000/`,
+        changeOrigin: true,
+        pathRewrite: { "^/api": "" }
       }
     }
   },

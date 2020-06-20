@@ -27,7 +27,7 @@ serve.interceptors.request.use(
             config.headers['juid'] = getToken()
         }
 
-        config.url = 'http://localhost:3000/' + config.url
+        config.url = 'http://localhost:9528/api/' + config.url
         return config
     },
     error => {
