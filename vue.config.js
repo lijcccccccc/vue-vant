@@ -25,7 +25,7 @@ module.exports = {
     },
     proxy: {
       [process.env.VUE_APP_BASE_API]: {
-        target: `http://${require('os').hostname()}:19009/`,
+        target: `https://${require('os').hostname()}:3000/`,
         changeOrigin: true
       }
     }

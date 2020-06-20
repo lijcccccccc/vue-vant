@@ -16,6 +16,7 @@ const options = {
 }
 
 Vue.use(VueLogger, options)
+//TODO 为什么Vue.use 失效
 Vue.config.productionTip = false
 
 new Vue({

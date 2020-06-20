@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { login } from '@/api/login.js'
 
 const state = {
     token: '',
@@ -15,10 +16,14 @@ const mutations = {
 
 const actions = {
     login({ commit }, userInfo) {
-        const { username, password } = userInfo
-        return new Promise((resolve) => {
-            commit('SET_TOKEN', '12312313')
-            return resolve()
+        const { username, password, num } = userInfo
+        return new Promise((resolve, reject) => {
+            login({ username, password, num }).then(res => {
+                commit('SET_TOKEN', res.data.token)
+                return resolve()
+            }).catch(() => {
+                return reject()
+            })
         })
     },
     logout() {

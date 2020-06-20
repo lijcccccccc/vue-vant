@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import User from './modules/user'
+import user from './modules/user'
+import getters from './getters'
 Vue.use(Vuex)
 
 const modules = Object.assign({}, {
-  User
+  user
 })
 
 export default new Vuex.Store({
-  modules: modules
+  modules: modules,
+  getters
 })
