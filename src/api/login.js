@@ -7,3 +7,10 @@ export function login(params) {
         data: params
     })
 }
+
+export function sendMns(phone_num) {
+    return request({
+        url: `mns/sendMns/${phone_num}`,
+        method: 'get'
+    })
+}

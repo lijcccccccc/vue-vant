@@ -16,14 +16,24 @@ const mutations = {
 
 const actions = {
     login({ commit }, userInfo) {
-        const { username, password, num } = userInfo
+        const { username, password, phonenum, num, type } = userInfo
         return new Promise((resolve, reject) => {
-            login({ username, password, num }).then(res => {
-                commit('SET_TOKEN', res.data.token)
-                return resolve()
-            }).catch(() => {
-                return reject()
-            })
+            if (type === 1) {
+                login({ username, password, num, type }).then(res => {
+                    commit('SET_TOKEN', res.data.token)
+                    return resolve()
+                }).catch(() => {
+                    return reject()
+                })
+
+            } else if (type === 2) {
+                login({ type, phonenum }).then(res => {
+                    commit('SET_TOKEN', res.data.token)
+                    return resolve()
+                }).catch(() => {
+                    return reject()
+                })
+            }
         })
     },
     logout() {

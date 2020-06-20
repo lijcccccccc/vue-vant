@@ -17,5 +17,5 @@ yarn build
 
 ### Some of these are used in the project
 ```
-Vue-cli Vue-router Vuex serve axios vant 
+Vue-cli Vue-router Vuex serve axios vant  webpack
 ```
