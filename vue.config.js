@@ -25,9 +25,8 @@ module.exports = {
     },
     proxy: {
       '/api': {
-        target: `http://${require('os').hostname()}:3000/`,
-        changeOrigin: true,
-        pathRewrite: { "^/api": "" }
+        target: `http://localhost:3000/`,
+        changeOrigin: true
       }
     }
   },
