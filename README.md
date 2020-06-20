@@ -15,10 +15,7 @@ yarn serve
 yarn build
 ```
 
-### Lints and fixes files
+### Some of these are used in the project
 ```
-yarn lint
+Vue-cli Vue-router Vuex serve axios vant 
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
